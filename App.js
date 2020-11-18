@@ -16,7 +16,7 @@ export default function App() {
     </View>
   );
 }
-
+//comments
 const styles = StyleSheet.create({
   
 });
