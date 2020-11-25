@@ -4,10 +4,16 @@ import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 
 export default function App() {
   const [enteredGoal, setEnteredGoal] = useState('');
+  const [courseGoals, setCourseGoals] = useState([]);
 
   const goalInputHandler = (enteredText) => {
     setEnteredGoal(enteredText);
   };
+
+  const addGoalHandler = () => {
+    console.log(enteredGoal);
+    setCourseGoals([...setCourseGoals, enteredGoal]);
+  }
 
   return (
     <View style={styles.screen}>
@@ -18,7 +24,10 @@ export default function App() {
           onChangeText={goalInputHandler}
           value ={enteredGoal}
         />
-        <Button title="ADD" />
+        <Button title="ADD" onPress={addGoalHandler} />
+      </View>
+      <View>
+
       </View>
     </View>
   );
@@ -29,14 +38,13 @@ const styles = StyleSheet.create({
     padding: 50, 
     flexDirection: "row", 
     width:'80%',
-    height: 300,
-    justifyContent:'space-around',
+    justifyContent:'space-between',
     alignItems:'center'
   },
-  inputContainer: {
-    backgroundColor: 'red',
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
+  input: {
+    borderBottomColor: 'black',
+    borderBottomWidth: 1,
+    padding: 10,
+    flex: 1
   }
 });
