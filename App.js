@@ -8,7 +8,7 @@ export default function App() {
   const goalInputHandler = (enteredText) => {
     setEnteredGoal(enteredText);
   };
-  
+
   return (
     <View style={styles.screen}>
       <View style={styles.inputContainer}>
@@ -16,6 +16,7 @@ export default function App() {
           placeholder="Course Goal"
           style={styles.input}
           onChangeText={goalInputHandler}
+          value ={enteredGoal}
         />
         <Button title="ADD" />
       </View>
