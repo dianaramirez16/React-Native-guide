@@ -42,7 +42,6 @@ export default function App() {
 const styles = StyleSheet.create({
   screen: { 
     padding: 50, 
-    flexDirection: "row", 
     width:'80%',
     justifyContent:'space-between',
     alignItems:'center'
